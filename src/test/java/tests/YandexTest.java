@@ -18,7 +18,6 @@ public class YandexTest {
 
 //      проверить, что Google есть в результате поиска
       $("html").shouldBe(Condition.text("Google — поисковая система"));
-
   }
 
 
@@ -82,7 +81,6 @@ public class YandexTest {
 
 //    Клик на выбор языка ввода
     $(".Translate-Select").click();
-
 }
 
 

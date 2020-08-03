@@ -118,29 +118,31 @@ class GoogleTest {
 //        Поиск корма для кошек
         $(".MuiInputBase-input").setValue("корм для кошек").pressEnter();
 
-//        Выбрать город
-        sleep(5000);
-        $(".Button_button_content__QGRJV").click();
-
 //        Клик по второму выданному результату
         $(By.xpath("//div[@id='products-wrapper']//li[@data-position='2']")).click();
 
 //        Добавить товар в корзину
         $(byText("Добавить в корзину")).click();
-        sleep(15000);
+        sleep(10000);
 
 //        Перейти в корзину
         $(byTitle("Корзина")).click();
 
-//        Увеличить кол-во товара в корзине вручную, задав число самому
-        $(".QuantityCounter_input__19Md_").setValue("100");
+//        Если товар последний, то переход к офомлению заказа
+        if($(".CartItem_cartItem_exist__1iUZy").has(text("Последний")))
+        {
+            //        Увеличить кол-во товара в корзине вручную, задав число самому
+            $(".QuantityCounter_input__19Md_").click();
+            $(getFocusedElement()).setValue("11");
 
-//        Уменьшить кол-во товар в корзине на 3, кликая на значок -
-        $(".QuantityCounter_btn_minus__vrIsA").click();
-        $(".QuantityCounter_btn_minus__vrIsA").click();
-        $(".QuantityCounter_btn_minus__vrIsA").click();
+            //        Уменьшить кол-во товар в корзине на 3, кликая на значок -
+            $(".QuantityCounter_btn_minus__vrIsA").click();
+            $(".QuantityCounter_btn_minus__vrIsA").click();
+            $(".QuantityCounter_btn_minus__vrIsA").click();
+        }
 
 //        Клик Оформить заказ
+        $(byText("Оформить заказ")).click();
         $(byText("Оформить заказ")).click();
     }
 
