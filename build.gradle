@@ -5,6 +5,9 @@ plugins {
 }
 
 test {
+
+//    systemProperty "chromeoptionp.prefs", "intl.accept_languages=en"
+
     useJUnitPlatform()
 }
 group 'org.example'

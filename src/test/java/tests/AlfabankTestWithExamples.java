@@ -6,21 +6,20 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class AlfabankTests {
+public class AlfabankTestWithExamples {
 
     @Test
     void alfabankDepositeTest() {
-       open("https://alfabank.ru/");
-       $(byText("Вклады")).click();
-       $("html").shouldHave(text("Вклады и инвестиции"));
+        open("https://alfabank.ru/");
+        $(byText("Вклады")).click();
+        $("html").shouldHave(text("Вклады и инвестиции"));
 //       Поиск видимых элементов
-       $$(byText("Депозиты")).find(visible).click();
+        $$(byText("Депозиты")).find(visible).click();
 //       $$(byText("Депозиты")).filter(visible).first().click();
 //       $(byText("Депозиты"),1).click();
-       $(".product-cell__row_recharged:not(.disabled)").shouldHave(text("Самый высокий доход"));
+        $(".product-cell__row_recharged:not(.disabled)").shouldHave(text("Самый высокий доход"));
 //       $(".product-cell__row_recharged.col-xs-12").shouldHave(text("Самый высокий доход"));
-
-
+    }
 
 
 
@@ -34,10 +33,6 @@ public class AlfabankTests {
 
 //        SelenideElement loginButton=$("div").preceding(0); - можно обозначать элементы, в таком коде поиск не происходит
 
-
-
-
-    }
 
 
 
