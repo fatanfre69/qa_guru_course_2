@@ -43,10 +43,9 @@ void insuranceAlfaBankTest() {
     open("https://alfabank.ru/");
 
 //    Клик по Вклады
-    $((".p2vYszTaW"), 2).preceding(0).click();
+//    $((".p2vYszTaW"), 2).preceding(0).click();
 //    $((".m2vYszTaW"), 1).parent().click();
-
-//    $((".n2vYszTaW"),1).closest("p2vYszTaW").click(); - ???
+    $((".n2vYszTaW"),1).closest(".p2vYszTaW").click();
 
 // Найти на странице текст "Вклады и инвестиции"
     $("html").shouldHave(text("Вклады и инвестиции"));
