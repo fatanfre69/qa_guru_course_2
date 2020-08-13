@@ -1,4 +1,4 @@
-package tests;
+package tests.lesson_3_AlfaBank_tests;
 
 import org.junit.jupiter.api.Test;
 

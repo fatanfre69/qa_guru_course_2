@@ -1,18 +1,13 @@
-package tests;
+package tests.lesson_2_Google_Yandex_tests;
 
-import com.codeborne.selenide.Configuration;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
-import static utils.RandomUtils.getRandomInt;
-import static utils.RandomUtils.getRandomString;
+import static utils.RandomUtils.*;
 
 
 class GoogleTest {

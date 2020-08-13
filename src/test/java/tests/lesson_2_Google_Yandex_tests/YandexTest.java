@@ -1,4 +1,4 @@
-package tests;
+package tests.lesson_2_Google_Yandex_tests;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
