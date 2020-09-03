@@ -28,9 +28,9 @@ repositories {
     mavenCentral()
 }
 
-//compileTestJava {
-//    options.encoding = 'UTF-8'
-//}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
 
 task just_simple_test(type: Test) {
     useJUnitPlatform()
