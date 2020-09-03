@@ -32,6 +32,10 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
+task just_simple_test(type: Test) {
+    useJUnitPlatform()
+}
+
 dependencies {
     compile("io.qameta.allure:allure-java-commons:2.13.5")
     compile("io.qameta.allure:allure-rest-assured:2.13.5")
