@@ -33,7 +33,7 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
-task just_simple_test(type: Test) {
+task just_test(type: Test) {
     useJUnitPlatform {
         includeTags 'simple'
     }
