@@ -1,16 +1,19 @@
 package tests.lesson_6_Jenkins;
 
 import org.junit.jupiter.api.*;
+import org.junit.platform.commons.logging.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class param_test {
+    static Logger logger = LoggerFactory.getLogger(param_test.class);
 
     @Test
     @Tag("param")
     void paramsTest() {
         String c = System.getProperty("cc"); // take from terminal gradle params_test -Dcc=salad
 
+//        logger.info();
         System.out.println("a = " + c);
         assertEquals("salad", c, "a = " + c);
     }
