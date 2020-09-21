@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class just_simple_test {
+public class simple_test {
     @Test
     @Tag("simple")
     void searchNothingTestPositive()  {

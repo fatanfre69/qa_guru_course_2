@@ -42,6 +42,12 @@ task just_test(type: Test) {
     }
 }
 
+task params_test(type: Test) {
+    useJUnitPlatform {
+        includeTags 'param'
+    }
+}
+
 dependencies {
     compile("io.qameta.allure:allure-java-commons:2.13.5")
     compile("io.qameta.allure:allure-rest-assured:2.13.5")
