@@ -5,14 +5,14 @@ import org.junit.jupiter.api.*;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class just_simple_test {
     @Test
     @Tag("simple")
-    void searchNothingTestPositive() {
-        open("https://google.com");
-        $(byName("q")).setValue("Nothing").pressEnter();
-        $("html").shouldHave(text("Nothing"));
+    void searchNothingTestPositive()  {
+        int a = 1;
+        assertEquals(a, 1);
     }
 
     @Test
