@@ -45,6 +45,7 @@ task just_test(type: Test) {
 task params_test(type: Test) {
     useJUnitPlatform {
         includeTags 'param'
+        excludeTags 'simple'
     }
 }
 

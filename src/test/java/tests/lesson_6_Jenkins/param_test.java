@@ -2,17 +2,16 @@ package tests.lesson_6_Jenkins;
 
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class param_test {
 
     @Test
     @Tag("param")
     void paramTest()  {
-        int a = 2;
-        String bb = System.getProperty("bb");
-        int b = Integer.parseInt(bb);  // take from terminal< gradle simple tests -Dbb=3
+        String b = System.getProperty("bb"); // take from terminal gradle params_test -Dbb=salad
 
-        assertEquals(a * b, 6);
+        assertThat("salad", equalTo(b));
     }
 }
