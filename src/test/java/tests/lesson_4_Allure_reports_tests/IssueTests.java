@@ -1,6 +1,6 @@
 package tests.lesson_4_Allure_reports_tests;
 
-import com.codeborne.selenide.*;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;

@@ -13,7 +13,6 @@ allure {
     useJUnit5() {
         version = '2.13.5'
     }
-
 }
 
 test {
@@ -31,6 +30,10 @@ repositories {
 
 compileTestJava {
     options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    systemProperties = System.properties
 }
 
 task just_test(type: Test) {

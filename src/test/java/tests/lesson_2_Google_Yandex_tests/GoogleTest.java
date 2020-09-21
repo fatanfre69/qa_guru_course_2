@@ -1,6 +1,6 @@
 package tests.lesson_2_Google_Yandex_tests;
 
-import jdk.jfr.Description;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -59,7 +59,7 @@ class GoogleTest {
 
 
     @Test
-    @Description("Регистарция акканута Google с несовпадающими паролями")
+    @Description ("Регистарция акканута Google с несовпадающими паролями")
     void registrationGoogleGmail() {
         String randomString = getRandomString(15);
         int randomInt = getRandomInt(22, 100);
