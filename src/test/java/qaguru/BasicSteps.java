@@ -84,14 +84,6 @@ public class BasicSteps {
     @Step ("Проверяем наличие задачи")
     public void checkIssueName () {$(withText(ISSUE)).should(Condition.exist);}
 
-
-
-
-
-
-
-
-
     @Step("Ищем репозиторий")
     public void searchForRepository(final String name) {
         $(".header-search-input").click();

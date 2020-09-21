@@ -5,11 +5,11 @@ import org.junit.platform.commons.logging.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Tag("param")
 public class param_test {
     static Logger logger = LoggerFactory.getLogger(param_test.class);
 
     @Test
-    @Tag("param")
     void paramsTest() {
         String c = System.getProperty("cc", "salad"); // take from terminal gradle params_test -Dcc=salad
 
@@ -21,16 +21,15 @@ public class param_test {
 
     @Test
     @Disabled ("вопрос с синтаксисиом или ... ?")
-    @Tag("param")
     void paramTest()  {
         String a = "tomato";
         String b = "cucumber";
-        String c = System.getProperty("cc"); // take from terminal gradle params_test -Dcc=salad
+        String c = System.getProperty("сс"); // take from terminal gradle params_test -Dcc=tomatocucumber
 
         assertEquals(a + b, c);
 
-        System.out.println("c = " + c);
-        assertEquals("salad", c, "c = " + c);
+//        System.out.println("c = " + c);
+//        assertEquals("tomatoucumber", c, "c = " + c);
     }
 }
 
