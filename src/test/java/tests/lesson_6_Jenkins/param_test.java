@@ -1,17 +1,20 @@
 package tests.lesson_6_Jenkins;
 
 import org.junit.jupiter.api.*;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class param_test {
 
     @Test
     @Tag("param")
     void paramTest()  {
-        String b = System.getProperty("bb"); // take from terminal gradle params_test -Dbb=salad
+        String a = "tomato";
+        String b = "cucumber";
+        String c = System.getProperty("cc"); // take from terminal gradle params_test -Dcc=salad
 
-        assertThat("salad", equalTo(b));
+        assertEquals(a + b, c);
+
+        System.out.println("c = " + c);
+        assertEquals("salad", c, "c = " + c);
     }
 }
