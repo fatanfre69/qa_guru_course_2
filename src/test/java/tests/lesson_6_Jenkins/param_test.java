@@ -11,16 +11,16 @@ public class param_test {
     @Test
     @Tag("param")
     void paramsTest() {
-        String c = System.getProperty("cc"); // take from terminal gradle params_test -Dcc=salad
+        String c = System.getProperty("cc", "salad"); // take from terminal gradle params_test -Dcc=salad
 
-//        logger.info();
+//        logger.info("b = " + c);
         System.out.println("a = " + c);
         assertEquals("salad", c, "a = " + c);
     }
 
 
     @Test
-    @Disabled ("вопрос с синтаксисиом или ...?")
+    @Disabled ("вопрос с синтаксисиом или ... ?")
     @Tag("param")
     void paramTest()  {
         String a = "tomato";
