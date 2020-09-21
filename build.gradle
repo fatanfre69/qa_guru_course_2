@@ -49,8 +49,6 @@ task just_test(type: Test) {
     }
 }
 
-logging.captureStandardOutput LogLevel.INFO
-
 task params_test(type: Test) {
     useJUnitPlatform {
         includeTags 'param'
