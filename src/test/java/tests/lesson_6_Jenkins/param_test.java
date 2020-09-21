@@ -1,11 +1,23 @@
 package tests.lesson_6_Jenkins;
 
 import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class param_test {
 
     @Test
+    @Tag("param")
+    void paramsTest() {
+        String c = System.getProperty("cc"); // take from terminal gradle params_test -Dcc=salad
+
+        System.out.println("a = " + c);
+        assertEquals("salad", c, "a = " + c);
+    }
+
+
+    @Test
+    @Disabled ("вопрос с синтаксисиом или ...?")
     @Tag("param")
     void paramTest()  {
         String a = "tomato";
@@ -18,3 +30,4 @@ public class param_test {
         assertEquals("salad", c, "c = " + c);
     }
 }
+
