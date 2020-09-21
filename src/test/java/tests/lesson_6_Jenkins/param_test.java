@@ -15,7 +15,7 @@ public class param_test {
 
 //        logger.info("b = " + c);
         System.out.println("a = " + c);
-        assertEquals("salad", c, "a = " + c);
+        assertEquals("salad", c, "c = " + c);
     }
 
 
