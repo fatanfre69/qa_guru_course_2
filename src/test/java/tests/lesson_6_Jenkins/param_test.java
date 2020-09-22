@@ -25,7 +25,6 @@ public class param_test {
         String a = "tomato";
         String b = "cucumber";
         String c = System.getProperty("сс"); // take from terminal gradle params_test -Dcc=tomatocucumber
-
         assertEquals(a + b, c);
 
 //        System.out.println("c = " + c);
