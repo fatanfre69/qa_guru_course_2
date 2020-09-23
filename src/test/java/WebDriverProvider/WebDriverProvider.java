@@ -11,7 +11,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
 
     @Override
     public WebDriver get() {
-        final String browserName = System.getProperty("browser,name");
+        final String browserName = System.getProperty("browser.name");
         if ("chrome".equals(browserName)) {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
