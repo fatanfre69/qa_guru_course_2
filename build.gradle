@@ -18,6 +18,8 @@ allure {
 test {
 //    systemProperty "chromeoptionp.prefs", "intl.accept_languages=en"
     useJUnitPlatform()
+
+    systemProperty("browser.name", "chrome")
 }
 
 group 'org.example'
@@ -57,6 +59,9 @@ task params_test(type: Test) {
 }
 
 dependencies {
+    compile('org.seleniumhq.selenium:selenium-java:3.141.59')
+    compile('io.github.bonigarcia:webdrivermanager:4.2.0')
+
     compile("io.qameta.allure:allure-java-commons:2.13.5")
     compile("io.qameta.allure:allure-rest-assured:2.13.5")
     compile("io.qameta.allure:allure-selenide:2.13.5")
@@ -64,7 +69,7 @@ dependencies {
     compile("io.rest-assured:rest-assured:4.3.1")
     compile("com.fasterxml.jackson.core:jackson-databind:2.11.2")
 
-    testImplementation 'com.codeborne:selenide:5.13.0'
+    testImplementation('com.codeborne:selenide:5.13.0')
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
     compile("org.junit.jupiter:junit-jupiter-params:5.6.2")
