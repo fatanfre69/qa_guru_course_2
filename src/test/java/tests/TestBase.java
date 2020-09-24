@@ -26,7 +26,7 @@ public class TestBase {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getBrowserConsoleLogs());
-//        attachVideo();
+        attachVideo();
         closeWebDriver();
     }
 
