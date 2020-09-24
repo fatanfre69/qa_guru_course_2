@@ -51,6 +51,12 @@ task just_test(type: Test) {
     }
 }
 
+task video_test(type: Test) {
+    useJUnitPlatform {
+        includeTags 'attach_video'
+    }
+}
+
 task params_test(type: Test) {
     useJUnitPlatform {
         includeTags 'param'
