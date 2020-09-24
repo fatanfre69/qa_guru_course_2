@@ -4,7 +4,6 @@ import org.junit.jupiter.api.*;
 import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
 
 public class attachVideoTest extends TestBase {
@@ -14,9 +13,11 @@ public class attachVideoTest extends TestBase {
     public void attachVideoTests()  {
 //        Configuration.headless = true;
 
-            open("https://google.com");
-            $(byName("q")).setValue("Selenide").pressEnter();
-            $("html").shouldHave(text("ru.selenide.org"));
+        open("http://ya.ru");
+
+        $("#text").val("wikipedia").pressEnter();
+
+        $("html").shouldHave(text("wikipedia.org"));
 
     }
 }
