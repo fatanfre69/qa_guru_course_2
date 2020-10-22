@@ -1,6 +1,6 @@
 package tests.lesson_3_AlfaBank_tests;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
@@ -33,6 +33,7 @@ public class AlfabankTestWithExamples {
 
 //        Проверить, что в архивных депозиатх присутствует депозит Львиная доля
         $(byText("Львиная доля")).shouldBe(visible);
+
     }
 
 
